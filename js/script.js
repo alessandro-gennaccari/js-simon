@@ -79,7 +79,7 @@ function sceltaUtente(){
     }
 
     $('.indovinati').text('Hai indovinato: ' + arrayRisultati.length + ' numeri');
-    if (arrayRisultati.length == 1){
+    if (arrayRisultati.length >= 1){
         $('#numeri-indovinati').text('Ed i numeri sono: ' + arrayRisultati);
     }
 }
