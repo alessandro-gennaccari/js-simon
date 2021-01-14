@@ -17,11 +17,11 @@ while (arrayRandom.length < 5){
 console.log(arrayRandom);
 
 // Richiamata funzione per scandire il tempo
-tempoRimanente(3);
+tempoRimanente(29);
 $('#random').text(arrayRandom);
 
 //Impostato il tempo dopo il quale parte la funzione;
-setTimeout(sceltaUtente, 4000);
+setTimeout(sceltaUtente, 30000);
 
 //FUNZIONI
 //Funzione Genara un numero casuale
