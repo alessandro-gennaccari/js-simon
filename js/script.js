@@ -16,20 +16,40 @@ while (arrayRandom.length < 5){
 }
 console.log(arrayRandom);
 
-alert('Hai 30 secondi per memorizzare numero e posizione:\n\n' + arrayRandom)
+// Richiamata funzione per scandire il tempo
+tempoRimanente(3);
+$('#random').text(arrayRandom);
 
-//Impostato il tempo dopo il quale parte la funzione (Sto lavorandoci)
-setTimeout(sceltaUtente, 1000);
+//Impostato il tempo dopo il quale parte la funzione;
+setTimeout(sceltaUtente, 4000);
 
-//Fuonzione Genara un numero casuale
+//FUNZIONI
+//Funzione Genara un numero casuale
 function randomNumber(min, max){
     return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
+// Mostra il tempo rimanente per memorizzare i numeri
+function tempoRimanente(time){
+
+    var time;
+    var timer = setInterval(function(){
+        if (time == 0) {
+            clearInterval(timer);
+        } else {
+            $('.time').text('ATTENZIONE: Hai ancora: ' + time-- + 'secondi per memorizzare posizione e numeri');
+        }
+    },1000);
+
 }
 
 // Popolazione array dei numeri che l'utente iserisce
 // Con controllo su tutte le possibilità di errata digitazione
 // Poi, confronto numeri dei due array
 function sceltaUtente(){
+
+    $('.time').hide();
+    $('#random').hide();
 
     var arrayNumeriUtente = [];
     var i = 1;
@@ -62,5 +82,8 @@ function sceltaUtente(){
     }
     console.log(arrayRisultati);
 
-    alert('Hai indovinato: ' + arrayRisultati.length + ' numeri\n' + 'Ed i numeri sono: ' + arrayRisultati)
+    $('.indovinati').text('Hai indovinato: ' + arrayRisultati.length + ' numeri');
+    if (arrayRisultati.length == 1){
+        $('#numeri-indovinati').text('Ed i numeri sono: ' + arrayRisultati);
+    }
 }

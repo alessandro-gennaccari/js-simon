@@ -3,3 +3,34 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+.container {
+    height: 100vh;
+    background-color: red;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    font-size: 100px;
+}
+
+.row{
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.row p.time {
+    font-size: 25px;
+    color: yellow;
+    margin-bottom: 40px;
+
+}
+
+.row p.indovinati,
+#numeri-indovinati {
+    font-size: 50px;
+    color: yellow;
+}
