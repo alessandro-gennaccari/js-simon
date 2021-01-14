@@ -30,7 +30,6 @@ function randomNumber(min, max){
 // Mostra il tempo rimanente per memorizzare i numeri
 function tempoRimanente(time){
 
-    var time;
     var timer = setInterval(function(){
         if (time == 0) {
             clearInterval(timer);
