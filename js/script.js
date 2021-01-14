@@ -14,8 +14,6 @@ while (arrayRandom.length < 5){
     }
 
 }
-console.log(arrayRandom);
-
 // Richiamata funzione per scandire il tempo
 tempoRimanente(29);
 $('#random').text(arrayRandom);
@@ -68,7 +66,6 @@ function sceltaUtente(){
         i++;
 
     }
-    console.log(arrayNumeriUtente);
 
     var arrayRisultati = [];
     var i = 0;
@@ -80,7 +77,6 @@ function sceltaUtente(){
         i++;
 
     }
-    console.log(arrayRisultati);
 
     $('.indovinati').text('Hai indovinato: ' + arrayRisultati.length + ' numeri');
     if (arrayRisultati.length == 1){
